@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://b233gywdorrxr"]
+
+[ext_resource type="Texture2D" uid="uid://c1yjf7fs0htq2" path="res://sprites/checker.png" id="1_700dq"]
+
+[node name="CheckedBackground" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -1e+06
+offset_top = -1e+06
+offset_right = 1e+06
+offset_bottom = 1e+06
+texture = ExtResource("1_700dq")
+stretch_mode = 1

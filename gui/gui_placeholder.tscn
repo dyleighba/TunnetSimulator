@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxng01gu5vym"]
+
+[ext_resource type="Texture2D" uid="uid://drmu6vedqv14n" path="res://sprites/gui_placeholder.png" id="1_asoul"]
+
+[node name="GUIPlaceholder" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_asoul")

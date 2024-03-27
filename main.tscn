@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://n8gqsm7khk1j"]
+
+[ext_resource type="Script" path="res://src/gui/camera.gd" id="1_cx1p6"]
+[ext_resource type="PackedScene" uid="uid://b233gywdorrxr" path="res://gui/checked_background.tscn" id="1_h3j6c"]
+[ext_resource type="PackedScene" uid="uid://dxng01gu5vym" path="res://gui/gui_placeholder.tscn" id="3_xap86"]
+[ext_resource type="PackedScene" uid="uid://cccn5q6u3yue" path="res://gui/placeholder_placer.tscn" id="4_bex02"]
+
+[node name="Main" type="Node"]
+
+[node name="World" type="Node2D" parent="."]
+script = ExtResource("1_cx1p6")
+
+[node name="TextureRect" parent="World" instance=ExtResource("1_h3j6c")]
+
+[node name="GUIPlaceholder" parent="World" instance=ExtResource("3_xap86")]
+position = Vector2(336, 145)
+
+[node name="PlaceholderPlacer" parent="." node_paths=PackedStringArray("world", "placeholder") instance=ExtResource("4_bex02")]
+world = NodePath("../World")
+placeholder = NodePath("../World/GUIPlaceholder")
